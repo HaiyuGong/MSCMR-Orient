@@ -121,10 +121,10 @@ def get_orient(original_dir,image_name):
     #预测
     output=model(torch.tensor(input_img))
 
-    print(output)
+    # print(output)
     # 在第二维度（列）上找到每行的最大值的索引
     max_indices = torch.argmax(output, dim=1)
-    print(max_indices[0].item())
+    # print(max_indices[0].item())
     type=max_indices[0].item()
     # print(original_img)
     return type,original_img.shape
